@@ -33,6 +33,8 @@ jobs:
 
       - run: pnpm i
 
+      - run: pnpm build
+
       - run: npm publish
 
       - run: npx changelogithub

@@ -1,6 +1,6 @@
 {
   "name": "omn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A practical, lightweight and unique JavaScript toolkit.",
   "author": "chiskat <1@paperplane.cc> (https://paperplane.cc)",
   "license": "MIT",
@@ -24,11 +24,11 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "jsnext:main": "dist/index.esm.js",
-  "browser": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "typings": "dist/index.d.ts",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",

@@ -5,7 +5,7 @@
 <p style="display: flex; gap: 10px;">
   <a href="https://www.npmjs.com/package/omn"><img src="https://img.shields.io/npm/v/omn" alt="npm" /></a>
   <a href="https://npmcharts.com/compare/omn?minimal=true"><img src="https://img.shields.io/npm/dm/omn.svg?style=flat" alt="npm downloads" /></a>
-  <a href="https://bundlejs.com/?q=omn"><img src="https://img.shields.io/bundlejs/size/omn" alt="package size" /></a>
+  <a href="https://bundlejs.com/?q=omn"><img src="https://deno.bundlejs.com/badge?q=omn" alt="package size" /></a>
 </p>
 
 `omn` 是一个提供独特和实用工具函数的 npm 库——就像 `lodash`、`ramda` 等库一样，但它更贴近实际应用场景、更 “接地气”，也更现代化。

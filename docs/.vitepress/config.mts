@@ -34,6 +34,7 @@ export default defineConfig({
           items: [
             { text: '介绍', link: '/guide/bootstrap/introduction' },
             { text: '快速上手', link: '/guide/bootstrap/usage' },
+            { text: 'Agent Skills', link: '/guide/bootstrap/agent-skills' },
           ],
         },
         {

@@ -87,7 +87,8 @@
     "vitest": "^4.0.18"
   },
   "files": [
-    "dist/**"
+    "dist/**",
+    "skills/**"
   ],
   "publishConfig": {
     "access": "public",

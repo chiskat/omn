@@ -19,9 +19,10 @@
 ## 核心特点
 
 - 提供更独特更实用的工具函数；
-- 无副作用，支持 TreeShaking；
+- 有配套的 Agent Skills，和 AI 协同更方便；
 - 更好的兼容性，提供 CommonJS、ESModule、UMD 等多种模块入口；
 - 完全 TypeScript 类型支持和完善的 JSDoc 注释；
+- 无副作用，支持 TreeShaking；
 - 代码体积小，零依赖。
 
 ## 名称 `omn` 的由来

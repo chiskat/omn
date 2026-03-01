@@ -1,5 +1,7 @@
 {
   "*.ts": ["eslint", "prettier --list-different"],
   "*.mjs": ["eslint", "prettier --list-different"],
-  "*.md": ["prettier --list-different"]
+  "/*.md": ["prettier --list-different"],
+  "docs/**/*.md": ["prettier --list-different"],
+  "skills/*/SKILL.md": ["prettier --list-different"]
 }

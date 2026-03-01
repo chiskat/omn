@@ -8,8 +8,9 @@ export default [
   { ignores: ['**/dist', 'docs/.vitepress/cache'] },
   pluginJs.configs.recommended,
   ...tsEslint.configs.recommended,
+  { files: ['./scripts/**/*.{js,mjs}'], languageOptions: { globals: globals.node } },
   {
-    files: ['./{src,tests}/**/*.ts'],
+    files: ['./{src,tests,docs}/**/*.ts'],
     languageOptions: { globals: globals.browser },
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',

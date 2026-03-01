@@ -40,6 +40,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
+    "prepack": "node scripts/unsymlink.mjs",
     "build": "rollup -c",
     "format": "prettier --list-different .",
     "lint": "eslint",

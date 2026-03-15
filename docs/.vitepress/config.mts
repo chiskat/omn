@@ -25,6 +25,8 @@ export default defineConfig({
   metaChunk: true,
   cleanUrls: true,
   themeConfig: {
+    logo: '/logo.svg',
+
     nav: [{ text: '文档', link: '/guide/bootstrap/introduction', activeMatch: '/guide' }],
 
     sidebar: {

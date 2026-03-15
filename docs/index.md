@@ -6,6 +6,9 @@ hero:
   name: 'Omn'
   text: '实用、轻量、独特的 JavaScript 工具集'
   tagline: ''
+  image:
+    src: /logo.svg
+    alt: omn
   actions:
     - theme: brand
       text: 开始使用
@@ -15,6 +18,8 @@ hero:
       link: https://github.com/chiskat/omn
 
 features:
+  - title: Agent 优先
+    details: 安装 Agent Skills 后，由 AI 编程助手为你启用各个功能，解放双手。
   - title: 更实用
     details: 完整 TypeScript 和 JSDoc 支持，配备浏览器和 Node.js 双环境测试用例
   - title: 更轻量

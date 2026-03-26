@@ -1,5 +1,5 @@
-import { OmnError } from '../../misc/OmnError'
 import { mapTree } from './mapTree'
+import { OmnError } from '../../misc/OmnError'
 
 export interface TraverseTreeOptions<Children extends string = 'children', NewChildren extends string = Children> {
   /** 子节点使用的字段名，默认 `"children"` */

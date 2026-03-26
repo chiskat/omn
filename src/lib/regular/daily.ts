@@ -1,7 +1,7 @@
 import { addDays, set } from 'date-fns'
 
-import { OmnError } from '../../misc/OmnError'
 import { loadState, parseTime, saveState } from './_utils'
+import { OmnError } from '../../misc/OmnError'
 
 /** 每日函数触发器的配置项 */
 export interface DailyOptions {

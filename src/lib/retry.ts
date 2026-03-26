@@ -1,7 +1,7 @@
 import { isInteger } from 'lodash-es'
 
-import { OmnError } from '../misc/OmnError'
 import { sleep } from './sleep'
+import { OmnError } from '../misc/OmnError'
 
 export interface RetryOptions {
   /** 每两次执行之间的间隔时间毫秒，默认为 `0` */

@@ -1,7 +1,7 @@
 import { isArrayLike } from 'lodash-es'
 
-import { OmnError } from '../misc/OmnError'
 import { result } from './result'
+import { OmnError } from '../misc/OmnError'
 
 /**
  * 处理数组类型参数，始终返回数组，自动包装单元素的输入，自动执行函数输入

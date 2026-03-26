@@ -1,8 +1,8 @@
-import { set, nextDay, Day } from 'date-fns'
+import { Day, nextDay, set } from 'date-fns'
 import { isInteger } from 'lodash-es'
 
-import { OmnError } from '../../misc/OmnError'
 import { loadState, parseTime, saveState } from './_utils'
+import { OmnError } from '../../misc/OmnError'
 
 /** 每周函数触发器的配置项 */
 export interface WeeklyOptions {

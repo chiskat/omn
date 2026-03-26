@@ -1,5 +1,5 @@
-import { readdirSync, lstatSync, readlinkSync, copyFileSync, unlinkSync } from 'fs'
-import { resolve, join } from 'path'
+import { copyFileSync, lstatSync, readdirSync, readlinkSync, unlinkSync } from 'fs'
+import { join, resolve } from 'path'
 
 function processDir(dir) {
   for (const name of readdirSync(dir)) {

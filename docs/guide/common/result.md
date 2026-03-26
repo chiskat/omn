@@ -12,9 +12,7 @@ import { result } from 'omn'
 
 ```typescript
 // 曾经
-const input = typeof options.input === 'function'
-  ? options.input()
-  : options.input
+const input = typeof options.input === 'function' ? options.input() : options.input
 
 // 现在，使用 result
 const input = result(options.input)

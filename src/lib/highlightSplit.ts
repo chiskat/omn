@@ -1,7 +1,7 @@
 import { escapeRegExp, first, last } from 'lodash-es'
 
-import { OmnError } from '../misc/OmnError'
 import { asList } from './asList'
+import { OmnError } from '../misc/OmnError'
 
 export interface HighlightSplitOptions {
   /** 确保输出结果的开头和末尾始终为不高亮片段，如果不是，则会填补空字符串片段 */

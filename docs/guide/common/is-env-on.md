@@ -8,7 +8,7 @@ import { isEnvOn } from 'omn'
 
 因为 `process.env` 上的变量值均为字符串格式，用 `if` 来判断是始终为 `true` 的；且有人喜欢使用 `true`，有人喜欢使用 `1`，判断条件会比较复杂；此函数则专为此场景而设计，内置了以上各种判断逻辑，直接返回布尔结果。
 
-可通过配置项 `strict` 开启 “严格模式”，避免预期以外的输入。
+可通过配置项 `strict` 开启 “严格模式”，在预期以外输入时报错。
 
 ::: tip 提示
 视为开启的值输入：`true`、`"true"`、`"True"`、`"TRUE"`、`1`、`"1"`、`"on"`、`"On"`、`"ON"`；<br />
@@ -17,6 +17,11 @@ import { isEnvOn } from 'omn'
 如果已开启严格模式，则视为关闭的值输入必须为：`false`、`"false"`、`"False"`、`"FALSE"`、`0`、`"0"`、`"off"`、`"Off"`、`"OFF"`、`null`、`"null"`、`undefined`、`"undefined"`；<br />
 严格模式下，以上所有输入以外的输入会抛出错误。
 :::
+
+可通过配置项 `zodStringbool` 扩充判定规则，兼容 Zod 4 的 [`z.stringbool()`](https://zod.dev/api?id=stringbool#stringbool)：
+
+- 额外将 `"y"`、`"Y"`、`"enabled"`、`"Enabled"` 视为开启；
+- 额外将 `"n"`、`"N"`、`"disabled"`、`"Disabled"` 视为关闭。
 
 ## 示例
 
@@ -40,9 +45,11 @@ function isEnvOn(input: any, options?: IsEnvOnOptions): boolean
 ```typescript
 interface IsEnvOnOptions {
   strict?: boolean
+  zodStringbool?: boolean
 }
 ```
 
-| 字段     | 类型      | 默认值  | 说明                                            |
-| -------- | --------- | ------- | ----------------------------------------------- |
-| `strict` | `boolean` | `false` | “严格模式” 开关，开启后对预期以外的输入抛出错误 |
+| 字段            | 类型      | 默认值  | 说明                                                    |
+| --------------- | --------- | ------- | ------------------------------------------------------- |
+| `strict`        | `boolean` | `false` | “严格模式” 开关，开启后对预期以外的输入抛出错误         |
+| `zodStringbool` | `boolean` | `false` | 扩充判定规则，额外兼容 Zod 4 的 `z.stringbool()` 的取值 |

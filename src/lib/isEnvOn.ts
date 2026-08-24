@@ -7,6 +7,15 @@ export interface IsEnvOnOptions {
    * - 视为关闭的值输入：`false`、`"false"`、`"False"`、`"FALSE"`、`0`、`"0"`、`"off"`、`"Off"`、`"OFF"`、`null`、`"null"`、`undefined`、`"undefined"`。
    */
   strict?: boolean
+
+  /**
+   * 扩充规则，覆盖 Zod 4 的 z.stringbool() 中的值：
+   * - 视为开启的值输入，补充：`"y"`、`"Y"`、`"enabled"`、`"Enabled"`；
+   * - 视为关闭的值输入，补充：`"n"`、`"N"`、`"disabled"`、`"Disabled"`。
+   *
+   * @see https://zod.dev/api?id=stringbool#stringbool
+   */
+  zodStringbool?: boolean
 }
 
 /**
@@ -15,6 +24,7 @@ export interface IsEnvOnOptions {
  * 因为 `process.env` 上的变量值均为字符串格式，用 `if` 来判断是始终为 `true` 的；且有人喜欢使用 `true`，有人喜欢使用 `1`，判断条件会比较复杂；此函数则专为此场景而设计，内置了以上各种判断逻辑，直接返回布尔结果；还提供了 “严格模式” 避免预期以外的输入。
  *
  * 视为开启的值输入：`true`、`"true"`、`"True"`、`"TRUE"`、`1`、`"1"`、`"on"`、`"On"`、`"ON"`；其他输入均视为关闭。
+ * 开启 `zodStringbool` 后，还会将 `"y"`、`"Y"`、`"enabled"`、`"Enabled"` 视为开启，将 `"n"`、`"N"`、`"disabled"`、`"Disabled"` 视为关闭。
  *
  * @param input 输入值，通常为 `process.env.<字段>`
  * @param options 可选的配置参数
@@ -25,9 +35,15 @@ export interface IsEnvOnOptions {
  */
 export function isEnvOn(input: any, options?: IsEnvOnOptions): boolean {
   const strict = options?.strict || false
+  const zodStringbool = options?.zodStringbool || false
 
   const asTruly = [1, '1', true, 'true', 'True', 'TRUE', 'on', 'On', 'ON']
   const asFalsly = [0, '0', false, 'false', 'False', 'FALSE', 'off', 'Off', 'OFF', undefined, 'undefined', null, 'null']
+
+  if (zodStringbool) {
+    asTruly.push('y', 'Y', 'enabled', 'Enabled')
+    asFalsly.push('n', 'N', 'disabled', 'Disabled')
+  }
 
   if (strict && ![...asTruly, ...asFalsly].includes(input)) {
     throw new OmnError(isEnvOn.name, '开启严格模式时，输入了预期以外的值。')

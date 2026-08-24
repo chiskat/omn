@@ -60,4 +60,24 @@ describe(`isEnvOn`, () => {
     expect(() => isEnvOn(100, { strict: true })).toThrow()
     expect(() => isEnvOn(NaN, { strict: true })).toThrow()
   })
+
+  test(`兼容 Zod Stringbool`, () => {
+    expect(isEnvOn('y')).toBe(false)
+    expect(isEnvOn('enabled')).toBe(false)
+
+    expect(isEnvOn('y', { zodStringbool: true })).toBe(true)
+    expect(isEnvOn('Y', { zodStringbool: true })).toBe(true)
+    expect(isEnvOn('enabled', { zodStringbool: true })).toBe(true)
+    expect(isEnvOn('Enabled', { zodStringbool: true })).toBe(true)
+
+    expect(isEnvOn('n', { zodStringbool: true })).toBe(false)
+    expect(isEnvOn('N', { zodStringbool: true })).toBe(false)
+    expect(isEnvOn('disabled', { zodStringbool: true })).toBe(false)
+    expect(isEnvOn('Disabled', { zodStringbool: true })).toBe(false)
+
+    expect(() => isEnvOn('y', { strict: true })).toThrow()
+    expect(() => isEnvOn('n', { strict: true })).toThrow()
+    expect(isEnvOn('y', { strict: true, zodStringbool: true })).toBe(true)
+    expect(isEnvOn('n', { strict: true, zodStringbool: true })).toBe(false)
+  })
 })

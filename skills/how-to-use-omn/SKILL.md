@@ -20,7 +20,7 @@ npm add omn
 
 - [`asList`](./references/common/as-list.md): 将非数组的输入转为数组，适合处理函数的参数
 - [`highlightSplit`](./references/common/highlight-split.md): 处理文本关键字高亮，按高亮与否切分为片段对象
-- [`isEnvOn`](./references/common/is-env-on.md): 判断环境变量是否开启，避免把 `"False"`、`"0"` 也当做开启
+- [`isEnvOn`](./references/common/is-env-on.md): 判断环境变量是否开启，支持严格模式及 Zod 4 的 `z.stringbool()` 兼容规则
 - [`noNull`](./references/common/no-null.md): 从对象里浅层或深层移除所有 `null` 字段，可避免解构赋默认值失败
 - [`result`](./references/common/result.md): 将函数输入转为结果值，适合处理函数的参数
 - [`retry`](./references/common/retry.md): 在满足给定条件前不断重试或轮询，可指定超时/次数/报错的限制

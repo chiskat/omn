@@ -1,6 +1,6 @@
 {
   "name": "omn",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A practical, lightweight and unique JavaScript toolkit.",
   "author": "chiskat <1@paperplane.cc> (https://paperplane.cc)",
   "license": "MIT",
@@ -39,7 +39,7 @@
   "sideEffects": false,
   "scripts": {
     "prepare": "husky",
-    "prepack": "node scripts/unsymlink.mjs",
+    "prepack": "npx unsymlink ./skills/how-to-use-omn/references",
     "build": "rollup -c",
     "format": "prettier --list-different .",
     "lint": "eslint",
@@ -56,12 +56,12 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/cz-commitlint": "^19.8.0",
     "@eslint/js": "^9.22.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.13.11",
     "@vitest/browser-playwright": "^4.0.18",
@@ -83,6 +83,7 @@
     "rollup-plugin-dts": "^6.1.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.39.1",
+    "unsymlink": "^0.1.1",
     "vitepress": "1.6.4",
     "vitest": "^4.0.18"
   },

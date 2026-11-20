@@ -1,6 +1,6 @@
 ---
 name: how-to-use-omn
-description: omn 是一个 JavaScript 工具函数合集，它可以：组装/遍历/转换树形结构数据；管理以日/周/月为周期的函数触发；处理字符串/对象；等待/轮询/重试，还有很多独特的工具函数。
+description: omn 是一个 JavaScript 工具函数合集，它可以：组装/遍历/转换树形结构数据；管理以日/周/月为周期的函数触发；处理字符串/对象/FormData；等待/轮询/重试，还有很多独特的工具函数。
 license: MIT
 ---
 
@@ -30,6 +30,11 @@ npm add omn
 ## 杂项
 
 - [`OmnError`](./references/misc/omn-error.md): 可用于判断某错误对象是否由 `omn` 抛出
+
+## FormData
+
+- [`fromFormData`](./references/form-data/from-form-data.md): 与 `toFormData` 配套使用，将其生成的 `FormData` 还原为对象，保留原始结构和数据
+- [`toFormData`](./references/form-data/to-form-data.md): 将可能包含文件属性的对象转为 `FormData`，传输后可通过 `fromFormData` 还原回来
 
 ## 周期触发
 

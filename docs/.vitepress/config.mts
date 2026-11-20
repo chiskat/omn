@@ -54,6 +54,14 @@ export default defineConfig({
           ],
         },
         {
+          text: 'FormData',
+          collapsed: true,
+          items: [
+            { text: 'fromFormData', link: '/guide/form-data/from-form-data' },
+            { text: 'toFormData', link: '/guide/form-data/to-form-data' },
+          ],
+        },
+        {
           text: '每日/每周/每月',
           collapsed: true,
           items: [

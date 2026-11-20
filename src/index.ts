@@ -1,3 +1,6 @@
+export { fromFormData, type FromFormDataOptions } from './lib/form-data/fromFormData'
+export { toFormData, type ToFormDataOptions } from './lib/form-data/toFormData'
+
 export { regular, type RegularOptions } from './lib/regular/regular'
 export { daily, type DailyOptions } from './lib/regular/daily'
 export { weekly, type WeeklyOptions } from './lib/regular/weekly'

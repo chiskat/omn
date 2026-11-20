@@ -27,7 +27,7 @@ encodeURIComponentFixed('hello!(world)*')
 `omn` 同样提供一个 polyfill，用于全局修复 `encodeURIComponent`：
 
 ```typescript
-export { setupEncodeURIComponentPolyfill, cancelEncodeURIComponentPolyfill } from 'omn'
+import { cancelEncodeURIComponentPolyfill, setupEncodeURIComponentPolyfill } from 'omn'
 
 // 设置全局 polyfill
 setupEncodeURIComponentPolyfill()

@@ -24,6 +24,7 @@ npm add omn
 - [`noNull`](./references/common/no-null.md): 从对象里浅层或深层移除所有 `null` 字段，可避免解构赋默认值失败
 - [`result`](./references/common/result.md): 将函数输入转为结果值，适合处理函数的参数
 - [`retry`](./references/common/retry.md): 在满足给定条件前不断重试或轮询，可指定超时/次数/报错的限制
+- [`shallow`](./references/common/shallow.md): 返回对象的浅拷贝，但仅在指定深度范围内保留浅层非嵌套对象的字段，排除嵌套对象的字段
 - [`sleep`](./references/common/sleep.md): 等待，一般用于模拟数据请求等耗时操作
 
 ## 杂项

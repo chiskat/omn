@@ -49,6 +49,7 @@ export default defineConfig({
             { text: 'noNull', link: '/guide/common/no-null' },
             { text: 'result', link: '/guide/common/result' },
             { text: 'retry', link: '/guide/common/retry' },
+            { text: 'shallow', link: '/guide/common/shallow' },
             { text: 'sleep', link: '/guide/common/sleep' },
           ],
         },

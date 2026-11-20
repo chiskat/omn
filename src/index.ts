@@ -24,6 +24,7 @@ export { isEnvOn, type IsEnvOnOptions } from './lib/isEnvOn'
 export { noNull, type NoNullOptions } from './lib/noNull'
 export { result } from './lib/result'
 export { retry, type RetryResult, type RetryOptions } from './lib/retry'
+export { shallow, type ShallowOptions } from './lib/shallow'
 export { sleep } from './lib/sleep'
 
 export { OmnError } from './misc/OmnError'
